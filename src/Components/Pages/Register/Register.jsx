@@ -44,6 +44,14 @@ const Register = () => {
                     <div className=" py-8 px-4 shadow-lg w-[80%] bg-opacity-5 mx-auto sm:rounded-lg sm:px-10">
                         <form onSubmit={handleRegister} className="space-y-6 " action="#" method="POST">
                             <div>
+                                <label htmlFor="name" className=" block text-sm font-medium ">
+                                 Name
+                                </label>
+                                <div className="mt-1">
+                                    <input id="name" name="name" type="text" required className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none sm:text-sm" />
+                                </div>
+                            </div>
+                            <div>
                                 <label htmlFor="email" className=" block text-sm font-medium ">
                                     Email address
                                 </label>
@@ -51,7 +59,6 @@ const Register = () => {
                                     <input id="email" name="email" type="email" required className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none sm:text-sm" />
                                 </div>
                             </div>
-
                             <div>
                                 <label htmlFor="photo_url" className=" block text-sm font-medium ">
                                     photo_url
@@ -60,9 +67,6 @@ const Register = () => {
                                     <input id="photo_url" name="photo" type="text" required className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none sm:text-sm" />
                                 </div>
                             </div>
-
-
-
                             <div>
                                 <label htmlFor="password" className="block text-sm font-medium ">
                                     Password
@@ -71,16 +75,6 @@ const Register = () => {
                                     <input id="password" name="password" type="password" required className="appearance-none block w-full px-3 py-2 border border-gray-300 roun ded-md shadow-sm placeholder-gray-400 focus:outline-none sm:text-sm" />
                                 </div>
                             </div>
-                            <div>
-                                <label htmlFor="password" className="block text-sm font-medium ">
-                                    confirm  Password
-                                </label>
-                                <div className="mt-1">
-                                    <input id="confirm" name="confirm" type="password" required className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none sm:text-sm" />
-                                </div>
-                            </div>
-
-
                             <div>
                                 <button
 
