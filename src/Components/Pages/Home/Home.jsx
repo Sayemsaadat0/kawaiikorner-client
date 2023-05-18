@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import HeaderBanner from './HeaderBanner';
 import Gallary from './Gallary';
 import OurStore from './OurStore';
+import Feedback from './Feedback';
 
 
 const Home = () => {
@@ -16,6 +17,9 @@ const Home = () => {
             </section>
             <section className='mb-20 mt-24'>
                 <OurStore></OurStore>
+            </section>
+            <section className='mb-20 mt-24'>
+                <Feedback></Feedback>
             </section>
 
         </div>

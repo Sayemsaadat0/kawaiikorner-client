@@ -18,7 +18,7 @@ const Gallary = () => {
                     picture.map(p => <div
                     key={p._id}>
                     <img 
-                    className='hover:scale-125 duration-500 '
+                    className='hover:scale-125 duration-500 w-[100%]'
                     src={p.picture}  alt="" />
                     </div>)
                 }
