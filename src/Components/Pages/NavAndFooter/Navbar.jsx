@@ -16,7 +16,7 @@ const Navbar = () => {
                             <Link to='/'>Add A Toy</Link>
                             <Link to='/'>My Toy</Link>
                             <Link to='/'>All Toy</Link>
-                            <Link to='/'>Blog</Link>
+                            <Link to='/blog'>Blog</Link>
                         </ul>
                     </div>
                    <img className='w-36 rounded-md' src="https://i.ibb.co/M86pxhv/ss.png" alt="" />
@@ -27,7 +27,7 @@ const Navbar = () => {
                         <Link to='/'>Add A Toy</Link>
                         <Link to='/'>My Toy</Link>
                         <Link to='/'>All Toy</Link>
-                        <Link to='/'>Blog</Link>
+                        <Link to='/blog'>Blog</Link>
 
                     </ul>
                 </div>
