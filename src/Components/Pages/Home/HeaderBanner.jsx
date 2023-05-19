@@ -20,8 +20,8 @@ const HeaderBanner = () => {
                         Welcome to our toy wonderland, where joy and imagination come alive! Explore a vast collection of delightful toys that spark creativity, bring laughter.
                     </p>
                     <div className=' flex gap-10 mt-5 w-60'>
-                    <button className='btn btn-outline border-black w-1/2 hover:bg-fuchsia-500 hover:border-none'>button 1</button>
-                    <button className='btn btn-outline border-black w-1/2 hover:bg-fuchsia-500 hover:border-none'>button 2</button>
+                    <button className='btn btn-outline border-black w-1/2 hover:bg-fuchsia-500 hover:border-none'>Become a member</button>
+                    <button className='btn btn-outline border-black w-1/2 hover:bg-fuchsia-500 hover:border-none'>More about us</button>
                    
                     </div>
                 </div>
