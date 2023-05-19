@@ -1,8 +1,17 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import './Navbar.css'
+import { NavLink } from 'react-router-dom';
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const Navbar = () => {
-    const user = null
+    const { user, logout } = useContext(AuthContext)
+    const handlelogout = ()=>{
+        logout()
+        .then()
+        .catch(error =>{
+            console.log(error)
+        })
+    }
     return (
         <div>
             <div className="navbar bg-base-100">
@@ -13,27 +22,35 @@ const Navbar = () => {
                         </label>
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                             {/* dropdown */}
-                            <Link to='/'>Home</Link>
-                           <Link to='addtoy'>add a toy</Link>
-                            <Link to='/mytoy'>My Toy</Link>
-                            <Link to='/'>All Toy</Link>
-                            <Link to='/blog'>Blog</Link>
+                            <NavLink to='/'>Home</NavLink>
+                            <NavLink to='addtoy'>add a toy</NavLink>
+                            <NavLink to='/mytoy'>My Toy</NavLink>
+                            <NavLink to='/alltoy'>All Toy</NavLink>
+                            <NavLink to='/blog'>Blog</NavLink>
                         </ul>
                     </div>
-                   <img className='w-36 rounded-md' src="https://i.ibb.co/M86pxhv/ss.png" alt="" />
+                    <img className='w-36 rounded-md' src="https://i.ibb.co/M86pxhv/ss.png" alt="" />
                 </div>
                 <div className="navbar-center hidden lg:flex ">
                     <ul className="menu menu-horizontal px-1 gap-4">
-                        <Link to='/'>Home</Link>
-                        <Link to='addtoy'>add a toy</Link>
-                        <Link to='/mytoy'>My Toy</Link>
-                        <Link to='/'>All Toy</Link>
-                        <Link to='/blog'>Blog</Link>
+                        <NavLink to='/'>Home</NavLink>
+                        <NavLink to='addtoy'>add a toy</NavLink>
+                        <NavLink to='/mytoy'>My Toy</NavLink>
+                        <NavLink to='/alltoy'>All Toy</NavLink>
+                        <NavLink to='/blog'>Blog</NavLink>
 
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link to='/login'>Login</Link>
+                    {
+                        user ? <>
+                        <div className='tooltip tooltip-error' data-tip={user.displayName}>
+
+                            <img className='mr-5 h-10 rounded-full' src={user.photoURL} alt="a" />
+                        </div>
+                            <button onClick={handlelogout}>logout</button>
+                        </> :    <NavLink to='/login'>Login</NavLink>
+                 }
                 </div>
             </div>
 
