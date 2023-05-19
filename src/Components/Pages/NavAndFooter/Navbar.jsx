@@ -5,6 +5,7 @@ import { AuthContext } from '../../Provider/AuthProvider';
 
 const Navbar = () => {
     const { user, logout } = useContext(AuthContext)
+    console.log(user)
     const handlelogout = ()=>{
         logout()
         .then()
@@ -46,7 +47,7 @@ const Navbar = () => {
                         user ? <>
                         <div className='tooltip tooltip-error' data-tip={user.displayName}>
 
-                            <img className='mr-5 h-10 rounded-full' src={user.photoURL} alt="a" />
+                            <img className='mr-5 h-10 rounded-full' src={user.photoURL} alt={user.displayName} />
                         </div>
                             <button onClick={handlelogout}>logout</button>
                         </> :    <NavLink to='/login'>Login</NavLink>
