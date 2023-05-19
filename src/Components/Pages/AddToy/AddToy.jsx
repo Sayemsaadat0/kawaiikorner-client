@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
+import Swal from 'sweetalert2'
 
 const AddToy = () => {
     const { user } = useContext(AuthContext)
     const handleAddToy = (event) => {
-
 
         event.preventDefault();
         const form = event.target;
@@ -29,7 +29,11 @@ const AddToy = () => {
             },
             body: JSON.stringify(data)
         })
-
+        Swal.fire(
+            'Good job!',
+            'You clicked the button!',
+            'success'
+          )
     }
     return (
         <div>
