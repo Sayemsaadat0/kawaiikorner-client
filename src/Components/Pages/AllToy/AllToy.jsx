@@ -10,6 +10,13 @@ const AllToy = () => {
            mt-10'>
            All toy
            </h2>
+           <div className='flex justify-center mt-10'>
+           <input type="text" placeholder="" className="input input-bordered 
+            w-[25%] " />
+           <button className='  relative right-20  px-4'>
+            search
+           </button>
+           </div>
             <div className="overflow-x-auto w-full mb-20 mt-20">
                 <table className="table w-full">
                     {/* head */}
