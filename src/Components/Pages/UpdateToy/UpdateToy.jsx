@@ -2,9 +2,11 @@ import React, { useContext } from 'react';
 
 import Swal from 'sweetalert2'
 import { AuthContext } from '../../Provider/AuthProvider';
+import { useNavigate } from 'react-router-dom';
 
 const UpdateToy = () => {
     const { user } = useContext(AuthContext)
+    const navigate = useNavigate()
     const handleAddToy = (event) => {
 
         event.preventDefault();
@@ -18,17 +20,17 @@ const UpdateToy = () => {
         const Available_Quantity = form.Available_Quantity.value;
         const details = form.details.value;
         const formData = {
-            toyName:toyName,
-            Picture:Picture,
-            Seller_Name:Seller_Name,
-            Seller_email:Seller_email,
-            sub_category:sub_category,
-            price:price,
-            Available_Quantity:Available_Quantity,
-            details:details
+            toyName: toyName,
+            Picture: Picture,
+            Seller_Name: Seller_Name,
+            Seller_email: Seller_email,
+            sub_category: sub_category,
+            price: price,
+            Available_Quantity: Available_Quantity,
+            details: details
         }
         console.log(formData);
-       /*  fetch('http://localhost:5000/addtoy', {
+        fetch('http://localhost:5000/addtoy', {
             method: "POST",
             headers: {
                 "content-type": "application/json"
@@ -39,11 +41,14 @@ const UpdateToy = () => {
             .then(data => {
                 if (data.acknowledged) {
                     Swal.fire(
-                       'your toy successfullly addeded'
-                      )
+                        'your toy successfullly addeded'
+                    )
+                    form.reset()
+                    navigate('/mytoy')
                     console.log(data)
+
                 }
-            }) */
+            })
     }
     return (
         <div>

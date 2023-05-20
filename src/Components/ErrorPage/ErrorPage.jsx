@@ -1,7 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useRouteError } from 'react-router-dom';
 
 const ErrorPage = () => {
+    const error=useRouteError()
     return (
         <div className=''>
              <div className='flex justify-center'>
@@ -13,6 +14,7 @@ const ErrorPage = () => {
                      Home
                     </Link> and put your feet up on the coffee table of relaxation
                 </h2>
+                <p className='text-red-600'>{error.message}</p>
             </div>
             <img className=' mx-auto' src="https://i.ibb.co/M65jHF3/woops.png" alt="" />
            
