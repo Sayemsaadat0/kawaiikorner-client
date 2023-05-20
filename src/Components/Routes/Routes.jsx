@@ -21,49 +21,50 @@ const router = createBrowserRouter([
     {
         path: '/',
         element: <Main></Main>,
-        errorElement : <ErrorPage></ErrorPage>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
-                path : '/',
-                element : <Home></Home>
+                path: '/',
+                element: <Home></Home>
             },
             {
-                path : 'login',
-                element : <Login></Login>
+                path: 'login',
+                element: <Login></Login>
             },
             {
-                path : 'register',
-                element : <Register></Register>
+                path: 'register',
+                element: <Register></Register>
             },
             {
-                path : 'blog',
-                element : <Blog></Blog>
+                path: 'blog',
+                element: <Blog></Blog>
             },
             {
-                path : 'addtoy',
-                element : <PrivateRoute>
+                path: 'addtoy',
+                element: <PrivateRoute>
                     <AddToy></AddToy>
                 </PrivateRoute>
             },
             {
-                path : 'mytoy',
-                element : <PrivateRoute>
+                path: 'mytoy',
+                element: <PrivateRoute>
                     <MyToy></MyToy>
                 </PrivateRoute>
             },
             {
-                path : 'alltoy',
-                element : <PrivateRoute>
+                path: 'alltoy',
+                element: <PrivateRoute>
                     <AllToy></AllToy>
                 </PrivateRoute>
             },
             {
-                path : 'toydetails',
-                element : <ToyDetails></ToyDetails>
+                path: '/toy/:id',
+                element: <PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
+                loader: ({ params }) => fetch(`http://localhost:5000/toyData/${params.id}`)
             },
             {
-                path : 'updatetoy',
-                element : <UpdateToy></UpdateToy>
+                path: 'updatetoy',
+                element: <UpdateToy></UpdateToy>
             },
         ]
     },

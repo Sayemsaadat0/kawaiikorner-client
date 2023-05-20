@@ -1,6 +1,9 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
 
 const ToyDetails = () => {
+    const toyData=useLoaderData();
+    const {toyName,Picture,Seller_Name,sub_category,price}=toyData;
     return (
         <div className='h-screen 
         bg-gradient-to-tr from-emerald-200 to-fuchsia-400
@@ -22,12 +25,12 @@ const ToyDetails = () => {
               ">
                 <img
                     className='rounded-lg'
-                    src="https://i.ibb.co/mNyxYHC/12-prev-ui-1.png" alt="s" />
+                    src={Picture} alt="s" />
                 <div className="card-body font-semibold ">
-                    <h2 className="card-title ">toy er name</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                    <p></p>
+                    <h2 className="card-title ">{toyName}</h2>
+                    <p>Seller Name: {Seller_Name}</p>
+                    <p>Sub Category: {sub_category}</p>
+                    <p>Price:{price}</p>
 
                 </div>
             </div>
