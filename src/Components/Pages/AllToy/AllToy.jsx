@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import AllToyTable from './AllToyTable';
 
 const AllToy = () => {
+    const [searchResults, setSearchResults] = useState([]);
     const [allToy, setAlltoy] = useState([])
     const url = 'http://localhost:5000/addtoy'
     useEffect(() => {
@@ -11,21 +12,31 @@ const AllToy = () => {
                 setAlltoy(data)
             })
     }, [])
-    const hadnleDelete = id => {
-        const proceed = confirm('are you sure you want to delete?')
-        if (proceed) {
-            fetch(`http://localhost:5000/addtoy/${id}`)
-                .then(res => res.json())
-                .then(data => {
-                    // console.log(data)
-                    if (data.deletedCount > 0) {
-                        alert('fuckoff')
-                        const remaiining = bookings.filter(b => b._id !== id)
-                        setBookings(remaiining)
-                    }
-                })
+    /*  const hadnleDelete = id => {
+         const proceed = confirm('are you sure you want to delete?')
+         if (proceed) {
+             fetch(`http://localhost:5000/addtoy/${id}`)
+                 .then(res => res.json())
+                 .then(data => {
+                     // console.log(data)
+                     if (data.deletedCount > 0) {
+                         alert('fuckoff')
+                         const remaiining = bookings.filter(b => b._id !== id)
+                         setBookings(remaiining)
+                     }
+                 })
+ 
+         }
+     } */
 
-        }
+    const handleSearch = (event) => {
+        event.preventDefault();
+        const form = event.target;
+        const toyName = form.search.value;
+        const url = `http://localhost:5000/search?toyName=${toyName}`;
+        fetch(url)
+            .then(res => res.json())
+            .then(data => setSearchResults(data))
     }
 
     /*  const hadnleUpdate = id =>{
@@ -56,25 +67,39 @@ const AllToy = () => {
            mt-10'>
                 All toy
             </h2>
-            <div className='flex justify-center mt-10'>
-                <input type="text" placeholder="" className="input input-bordered 
+            <form onSubmit={handleSearch} className='flex justify-center mt-10'>
+                <input type="text" name='search' placeholder="" className="input input-bordered 
             w-[25%] " />
-                <button className='  relative right-20  px-4'>
+                <button type='submit' className='  relative right-20  px-4'>
                     search
                 </button>
-            </div>
+            </form>
             <div className="overflow-x-auto w-full mb-20 mt-20">
                 <table className="table  w-full">
-                   {/* ...................  */}
+                    <thead>
+                        <tr>
+                            <th>Serial No</th>
+                            <th>Seller Name</th>
+                            <th> Toy Name</th>
+                            <th>Sub Category</th>
+                            <th>Price</th>
+                            <th>Available Quantity</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    {/* ...................  */}
                     <tbody>
                         {
-                            allToy.map(toyData => 
-                            <AllToyTable
-                                hadnleDelete={hadnleDelete}
-                             
-                                key={toyData._id}
-                                toyData={toyData}>
-                            </AllToyTable>)
+                            allToy.sort((a, b) => a.time > b.time ? -1 : 1).map((toyData, i) => <tr key={i}>
+                                <th>{i + 1}</th>
+                                <td>{toyData.Seller_Name}</td>
+                                <td>{toyData.toyName}</td>
+                                <td>{toyData.sub_category}</td>
+                                <td>{toyData.price}</td>
+                                <td>{toyData.Available_Quantity}</td>
+                                <td><button className='btn btn-sm'> view details</button></td>
+                            </tr>
+                            )
                         }
 
                     </tbody>
@@ -87,8 +112,8 @@ const AllToy = () => {
 export default AllToy;
 
 
- {/* head */}
-                    {/*<thead className=''>
+{/* head */ }
+{/*<thead className=''>
                         <tr>
                         <th className='mx-0'>
                         <label>

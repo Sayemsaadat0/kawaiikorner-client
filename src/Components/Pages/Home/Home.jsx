@@ -4,14 +4,12 @@ import Gallary from './Gallary';
 import OurStore from './OurStore';
 import Feedback from './Feedback';
 import ShopByCategory from './ShopByCategory';
-import ShopByCategoryDetails from './ShopByCategoryDetails';
+
 
 
 
 const Home = () => {
    
-    const [subcatagoryData, setSubcategoryData] = useState(null);
-    console.log(subcatagoryData);
     return (
         <div >
             <section>
@@ -23,14 +21,7 @@ const Home = () => {
             </section>
 
             <section className='mb-48 mt-48 '>
-                <ShopByCategory
-                    setSubcategoryData={setSubcategoryData}
-                ></ShopByCategory>
-                {
-                    subcatagoryData && <ShopByCategoryDetails
-                        subcatagoryData={subcatagoryData}
-                    ></ShopByCategoryDetails>
-                }
+                <ShopByCategory></ShopByCategory>
             </section>
 
 

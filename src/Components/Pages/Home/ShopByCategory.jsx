@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import ShopByCategoryDetails from './ShopByCategoryDetails';
 
-const ShopByCategory = ({ setSubcategoryData }) => {
+const ShopByCategory = () => {
+    const [subcatagoryData, setSubcategoryData] = useState(null);
+    console.log(subcatagoryData);
     const [categoryName, setCategoryName] = useState([])
 
     useEffect(() => {
@@ -14,148 +15,33 @@ const ShopByCategory = ({ setSubcategoryData }) => {
                 setCategoryName(data)
             })
     }, [])
-    useEffect(()=>{
+    useEffect(() => {
         AOS.init();
-    },[])
+    }, [])
     return (
         <div data-aos="fade-up"
-        data-aos-duration="3000">
+            data-aos-duration="3000">
             <h2 className='text-center text-3xl font-bold mb-20'>shop by category</h2>
-            <Tabs classname=''>
-                <TabList className='md:flex justify-center gap-10 text-2xl bg-gradient-to-tr from-cyan-100 to-fuchsia-100 p-4'>
-                    {
-                        categoryName.map(n => <Tab key={n._id}>
-                            <button onClick={() => setSubcategoryData(n)} className='hover:bg-fuchsia-200'>
-                                {n.subcatname}
-                            </button>
-                        </Tab>)
-                    }
-                </TabList>
-                <div
-                data-aos="fade-up"
-                data-aos-duration="3000"
-                className='flex justify-around mt-10'>
-                    {/* first  */}
-                    <TabPanel classname='mx-auto'>
-                        <div className='md:flex justify-evenly gap-10'>
-                            <div className="card card-compact w-96 bg-base-100 shadow-xl 
-                            hover:bg-gradient-to-tr
-                            from-emerald-200
-                             to-fuchsia-300 ">
-                                <figure><img src="https://i.ibb.co/VCGMyWn/17-prev-ui.png" alt="Shoes" /></figure>
-                                <div className="card-body">
-                                    <h2 className="card-title">title!</h2>
-                                    <p>price : </p>
-                                    <p>ratings : </p>
-                                 
-                                    <button
-                                     className="btn flex items-center gap-2 ">
-                                        View Details
-                                    </button>
-                                </div>
-                            </div>
-                            {/* card 2 */}
-                            <div className="card card-compact w-96 bg-base-100 shadow-xl mt-10
-                            
-                            hover:bg-gradient-to-tr from-emerald-200 to-fuchsia-300 ">
-                                <figure><img src="https://i.ibb.co/9rpqhpL/18-prev-ui.png" alt="Shoes" /></figure>
-                                <div className="card-body">
-                                    <h2 className="card-title">title!</h2>
-                                    <p>price : </p>
-                                    <p>ratings : </p>
 
-                                    <button className="btn flex items-center gap-2 ">
-                                        View Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </TabPanel>
-                    {/* second pannel */}
-                    <TabPanel>
-                        <div className='md:flex gap-10'>
+            <div className='md:flex justify-center gap-10 text-2xl bg-gradient-to-tr from-cyan-100 to-fuchsia-100 p-4'>
+                {
+                    categoryName.map(n => <div key={n._id}>
+                        <button onClick={() => setSubcategoryData(n)} className='hover:bg-fuchsia-200'>
+                            {n.subcatname}
+                        </button>
+                    </div>)
+                }
+            </div>
 
-                            <div className='md:flex justify-evenly gap-10'>
-                                <div className="card card-compact w-96 bg-base-100 shadow-xl 
-                            hover:bg-gradient-to-tr
-                            from-emerald-200
-                             to-fuchsia-300 ">
-                                    <figure><img src="https://i.ibb.co/njM7zs4/9-prev-ui.png" alt="Shoes" /></figure>
-                                    <div className="card-body">
-                                        <h2 className="card-title">title!</h2>
-                                        <p>price : </p>
-                                        <p>ratings : </p>
+            <div>
+                {
+                    subcatagoryData && <ShopByCategoryDetails
+                        subcatagoryData={subcatagoryData}
+                    ></ShopByCategoryDetails>
+                }
+            </div>
 
 
-                                        <button
-                                         className="btn flex items-center gap-2  ">
-                                            View Details
-                                        </button>
-                                    </div>
-                                </div>
-                                {/* card 2 */}
-                                <div className="card card-compact w-96 bg-base-100 shadow-xl mt-10
-                            
-                            hover:bg-gradient-to-tr from-emerald-200 to-fuchsia-300 ">
-                                    <figure><img src="https://i.ibb.co/LZfT7sF/7-prev-ui.png" alt="Shoes" /></figure>
-                                    <div className="card-body">
-                                        <h2 className="card-title">title!</h2>
-                                        <p>price : </p>
-                                        <p>ratings : </p>
-
-                                        <button 
-                                        className="btn flex items-center gap-2  ">
-                                            View Details
-                                            </button>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </TabPanel>
-                    {/* 3rd pannel */}
-                    <TabPanel>
-                        <div className='md:flex gap-10'>
-
-
-                            <div className='md:flex justify-evenly gap-10'>
-                                <div className="card card-compact w-96 bg-base-100 shadow-xl 
-                            hover:bg-gradient-to-tr
-                            from-emerald-200
-                             to-fuchsia-300 ">
-                                    <figure><img src="https://i.ibb.co/LZfT7sF/7-prev-ui.png" alt="Shoes" /></figure>
-                                    <div className="card-body">
-                                        <h2 className="card-title">title!</h2>
-                                        <p>price : </p>
-                                        <p>ratings : </p>
-                                        <button className="btn flex items-center gap-2 ">
-                                            View Details
-                                        </button>
-                                    </div>
-                                </div>
-                                {/* card 2 */}
-                                <div className="card card-compact w-96 bg-base-100 shadow-xl mt-10
-                            
-                            hover:bg-gradient-to-tr from-emerald-200 to-fuchsia-300 ">
-                                    <figure><img src="https://i.ibb.co/LZfT7sF/7-prev-ui.png" alt="Shoes" /></figure>
-                                    <div className="card-body">
-                                        <h2 className="card-title">title!</h2>
-                                        <p>price : </p>
-                                        <p>ratings : </p>
-
-                                        <button className="btn flex items-center gap-2">
-                                            View Details
-                                        </button>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </TabPanel>
-                </div>
-            </Tabs>
         </div>
     );
 };
