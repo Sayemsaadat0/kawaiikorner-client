@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
@@ -48,7 +47,7 @@ const ShopByCategory = () => {
                                        
                                         View Details
                                     
-                                        <FaArrowRight></FaArrowRight>
+                                       
                                     </button>
                                 </div>
                             </div>
@@ -67,7 +66,7 @@ const ShopByCategory = () => {
                                        
                                         View Details
                                        
-                                        <FaArrowRight></FaArrowRight>
+                                      
                                     </button>
 
                                 </div>
@@ -95,7 +94,7 @@ const ShopByCategory = () => {
                                      
                                         View Details
                                        
-                                        <FaArrowRight></FaArrowRight>
+                                   
                                     </button>
                                 </div>
                             </div>
@@ -113,7 +112,7 @@ const ShopByCategory = () => {
                                         ">   
                                         View Details
                                       
-                                        <FaArrowRight></FaArrowRight>
+                                 
                                     </button>
 
                                 </div>
@@ -143,7 +142,7 @@ const ShopByCategory = () => {
                                         ">   
                                         View Details
                                       
-                                        <FaArrowRight></FaArrowRight>
+                                
                                     </button>
                                 </div>
                             </div>
@@ -161,7 +160,7 @@ const ShopByCategory = () => {
                                        
                                         View Details
                                         
-                                        <FaArrowRight></FaArrowRight>
+                                     
                                     </button>
 
                                 </div>

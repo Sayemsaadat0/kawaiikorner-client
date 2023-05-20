@@ -1,7 +1,9 @@
 import React, { useContext, useState } from 'react';
-import { Link, useLocation, useNavigate, useRouteError } from 'react-router-dom';
-import { FaGithub } from 'react-icons/Fa';
-import { FcGoogle } from 'react-icons/Fc';
+import { Link, useLocation, useNavigate, useRouteError } from 
+'react-router-dom';
+
+
+
 import { AuthContext } from '../../Provider/AuthProvider';
 
 const Login = () => {
@@ -85,6 +87,8 @@ const Login = () => {
                                 </label>
                                 <div className="mt-1">
                                     <input id="email" name="email" type="email" required className="appearance-none block w-full  py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none sm:text-sm" />
+
+                                  
                                 </div>
                             </div>
 
@@ -113,7 +117,7 @@ const Login = () => {
                             </div>
                         </form>
                         <button onClick={handleGoogle} className="btn btn-outline btn-error mt-10 ">
-                            <FcGoogle className='w-10'></FcGoogle>
+                           
                             Login With Google</button>
                     </div>
                 </div>
@@ -127,12 +131,3 @@ const Login = () => {
 export default Login;
 
 
-
-/* 
- className="p-1 rounded-lg bg-gray-100 shadow-md focus:outline-none focus:border-2 border-cyan-500" 
-
-*/
-
-/* 
- className="block p-1 mt-3 rounded-lg bg-gray-100 shadow-md focus:outline-none focus:border-2 border-cyan-500"
-*/

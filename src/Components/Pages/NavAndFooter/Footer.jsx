@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/Fa';
+import { FaFacebook } from 'react-icons/fa';
 
 const Footer = () => {
     return (
@@ -35,14 +35,17 @@ const Footer = () => {
                 <div className="md:place-self-center md:justify-self-end">
                     <div className="grid grid-flow-col gap-4">
                         <a> 
-                            <FaFacebook className='text-3xl'></FaFacebook>
+                           <FaFacebook className='text-5xl'></FaFacebook>
                         </a>
+                       
                         <a> 
-                            <FaInstagram className='text-3xl'></FaInstagram>
+                           <FaFacebook className='text-5xl'></FaFacebook>
                         </a>
+                       
                         <a> 
-                            <FaTwitter className='text-3xl'></FaTwitter>
+                           <FaFacebook className='text-5xl'></FaFacebook>
                         </a>
+                       
                       
                       
                     </div>

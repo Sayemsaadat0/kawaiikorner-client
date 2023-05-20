@@ -16,42 +16,39 @@ const AddToy = () => {
         const price = form.price.value;
         const Available_Quantity = form.Available_Quantity.value;
         const details = form.details.value;
-        const formssss = [toyName, Picture, Seller_Name, Seller_email, sub_category, price, Available_Quantity, details]
-
-        console.log(formssss);
         const data = {
-            toyName
+            toyName:toyName,
+            Picture:Picture,
+            Seller_Name:Seller_Name,
+            Seller_email:Seller_email,
+            sub_category:sub_category,
+            price:price,
+            Available_Quantity:Available_Quantity,
+            details:details
         }
-        fetch('', {
+        console.log(data);
+        fetch('http://localhost:5000/addtoy', {
             method: "POST",
             headers: {
                 "content-type": "application/json"
             },
             body: JSON.stringify(data)
         })
+            .then(res => res.json())
+            .then(data => {
+                if (data.acknowledged) {
+                    alert('Toy added successfully')
+                    console.log(data)
+                }
+            })
 
 
-
-
-        fetch('http://localhost:7979/bookings',{
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body : JSON.stringify(booking)
-        })
-        .then(res => res.json())
-        .then(data => {
-           if(data.insertedId){
-            alert('marahaba')
-           }
-        })
-
-        Swal.fire(
-            'Good job!',
-            'You clicked the button!',
-            'success'
-          )
+        /* 
+                Swal.fire(
+                    'Good job!',
+                    'You clicked the button!',
+                    'success'
+                  ) */
     }
     return (
         <div>
@@ -94,8 +91,8 @@ const AddToy = () => {
                     <input
                         type="email"
                         name='Seller_email'
-                       defaultValue={user? user.email : 'your email '}
-                        className="input input-bordered w-full" disabled/>
+                        defaultValue={user ? user.email : 'your email '}
+                        className="input input-bordered w-full" disabled />
 
                     <label
                         className="label">
@@ -136,8 +133,6 @@ const AddToy = () => {
                         className="input input-bordered w-full" />
 
                 </div>
-
-
 
                 <div className='flex justify-center'>
                     <button type='submit' className='btn btn-success w-[50%] mt-5'>Submit</button>
