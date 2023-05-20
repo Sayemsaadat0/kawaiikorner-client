@@ -19,10 +19,10 @@ const Home = () => {
             <section className='mb-20 mt-24'>
                 <OurStore></OurStore>
             </section>
-            <section className='mb-48 mt-48'>
+            <section className='mb-48 mt-48 '>
               <ShopByCategory></ShopByCategory>
             </section>
-            <section className='mb-20 mt-24'>
+            <section className='mb-20 mt-24 '>
                 <Feedback></Feedback>
             </section>
 
