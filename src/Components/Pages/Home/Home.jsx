@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import HeaderBanner from './HeaderBanner';
 import Gallary from './Gallary';
 import OurStore from './OurStore';
@@ -7,11 +7,13 @@ import ShopByCategory from './ShopByCategory';
 import ShopByCategoryDetails from './ShopByCategoryDetails';
 
 
+
 const Home = () => {
+   
     const [subcatagoryData, setSubcategoryData] = useState(null);
     console.log(subcatagoryData);
     return (
-        <div>
+        <div >
             <section>
                 <HeaderBanner></HeaderBanner>
             </section>

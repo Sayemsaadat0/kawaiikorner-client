@@ -2,10 +2,10 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 
-const MyToytable = ({info}) => {
-    const{Available_Quantity,Picture,Seller_Name,Seller_email,details,price,sub_category,toyName} = info[0]
+const MyToytable = ({i}) => {
+    const{Available_Quantity,Picture,Seller_Name,Seller_email,details,price,sub_category,toyName} = i
     const { user, } = useContext(AuthContext)
-    console.log(info)
+    console.log(i)
     return (
         <div className='w-full'>
              <tr>

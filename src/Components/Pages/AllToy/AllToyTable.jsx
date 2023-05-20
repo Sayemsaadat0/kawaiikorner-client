@@ -3,7 +3,7 @@ import React from 'react';
 
 
 
-const AllToyTable = ({ allToy, hadnleDelete }) => {
+const AllToyTable = ({ toyData, hadnleDelete }) => {
     const { 
         Available_Quantity, 
         Picture, 
@@ -12,7 +12,7 @@ const AllToyTable = ({ allToy, hadnleDelete }) => {
         details, 
         price, 
         sub_category, 
-        toyName, _id } = allToy[0]
+        toyName, _id } = toyData
 
  
     // console.log(allToy)

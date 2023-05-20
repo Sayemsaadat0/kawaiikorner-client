@@ -38,7 +38,7 @@ const MyToy = () => {
                     <tbody>
                         {
                             info.map(i => <MyToytable
-                            info={info} key={i._id}
+                            i={i} key={i._id}
                             ></MyToytable>)
                         }
                     </tbody>

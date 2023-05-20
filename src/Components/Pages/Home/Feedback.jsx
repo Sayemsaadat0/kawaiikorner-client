@@ -1,17 +1,25 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Feedback = () => {
+    useEffect(()=>{
+        AOS.init();
+    },[])
     return (
         <div>
             <h3 className='text-center text-3xl font-bold'>our clients tal</h3>
             <div className='md:grid grid-cols-2 p-10 gap-5'>
-                <div className='shadow-lg             
+                <div
+                data-aos="zoom-in-right"
+                className='shadow-lg             
                 hover:bg-gradient-to-tr
                  from-emerald-200
                   to-fuchsia-300 
                    hover:shadow-teal-300
                    mb-10'>
                     <div
+                   
                         className="block 
                         rounded-lg 
                          text-center">
@@ -43,7 +51,9 @@ const Feedback = () => {
                     </div>
                 </div>
                 {/*  */}
-                <div className='shadow-lg 
+                <div
+                data-aos="zoom-in-left"
+                className='shadow-lg 
                hover:bg-gradient-to-tr
                 from-emerald-200 to-fuchsia-300          hover:shadow-teal-300 mb-5'>
                     <div
@@ -76,7 +86,9 @@ const Feedback = () => {
                     </div>
                 </div>
                 {/*  */}
-                <div className='
+                <div
+                data-aos="zoom-in-left"
+                className='
             shadow-lg 
              
                hover:bg-gradient-to-tr from-emerald-200 to-fuchsia-300          hover:shadow-teal-300'>
@@ -109,7 +121,9 @@ const Feedback = () => {
                     </div>
                 </div>
                 {/*  */}
-                <div className='
+                <div 
+                data-aos="zoom-in-right"
+                className='
             shadow-lg 
 
                hover:bg-gradient-to-tr from-emerald-200 to-fuchsia-300          hover:shadow-teal-300'>

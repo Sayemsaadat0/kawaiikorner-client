@@ -71,9 +71,9 @@ const AllToy = () => {
                             allToy.map(toyData => 
                             <AllToyTable
                                 hadnleDelete={hadnleDelete}
-                                hadnleUpdate={hadnleUpdate}
+                             
                                 key={toyData._id}
-                                allToy={allToy}>
+                                toyData={toyData}>
                             </AllToyTable>)
                         }
 

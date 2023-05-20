@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const ShopByCategory = ({ setSubcategoryData }) => {
     const [categoryName, setCategoryName] = useState([])
@@ -12,9 +14,12 @@ const ShopByCategory = ({ setSubcategoryData }) => {
                 setCategoryName(data)
             })
     }, [])
-
+    useEffect(()=>{
+        AOS.init();
+    },[])
     return (
-        <div className=''>
+        <div data-aos="fade-up"
+        data-aos-duration="3000">
             <h2 className='text-center text-3xl font-bold mb-20'>shop by category</h2>
             <Tabs classname=''>
                 <TabList className='md:flex justify-center gap-10 text-2xl bg-gradient-to-tr from-cyan-100 to-fuchsia-100 p-4'>
@@ -26,7 +31,10 @@ const ShopByCategory = ({ setSubcategoryData }) => {
                         </Tab>)
                     }
                 </TabList>
-                <div className='flex justify-around mt-10'>
+                <div
+                data-aos="fade-up"
+                data-aos-duration="3000"
+                className='flex justify-around mt-10'>
                     {/* first  */}
                     <TabPanel classname='mx-auto'>
                         <div className='md:flex justify-evenly gap-10'>
