@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
-import { AuthContext } from '../../Provider/AuthProvider';
-import Swal from 'sweetalert2'
 
-const AddToy = () => {
+import Swal from 'sweetalert2'
+import { AuthContext } from '../../Provider/AuthProvider';
+
+const UpdateToy = () => {
     const { user } = useContext(AuthContext)
     const handleAddToy = (event) => {
 
@@ -27,7 +28,7 @@ const AddToy = () => {
             details:details
         }
         console.log(formData);
-        fetch('http://localhost:5000/addtoy', {
+       /*  fetch('http://localhost:5000/addtoy', {
             method: "POST",
             headers: {
                 "content-type": "application/json"
@@ -42,11 +43,11 @@ const AddToy = () => {
                       )
                     console.log(data)
                 }
-            })
+            }) */
     }
     return (
         <div>
-            <h2 className='text-center text-3xl mb-10 font-semibold underline'>Add A Toy </h2>
+            <h2 className='text-center text-3xl mb-10 font-semibold underline'>Update Details</h2>
             <form className='mb-20' onSubmit={handleAddToy}>
                 <div className="form-control w-[50%] mx-auto">
                     <label
@@ -136,4 +137,4 @@ const AddToy = () => {
     );
 };
 
-export default AddToy;
+export default UpdateToy;

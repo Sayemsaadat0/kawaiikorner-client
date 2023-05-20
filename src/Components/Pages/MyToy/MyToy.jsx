@@ -1,16 +1,27 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { Link } from 'react-router-dom';
+import MyToytable from './MyToytable';
 
 const MyToy = () => {
-    const { user,  } = useContext(AuthContext)
+    const { user, } = useContext(AuthContext)
+    const [info, setInfo] = useState([])
+    const url = `http://localhost:5000/addtoy?email=${user.email}`
+
+    useEffect(() => {
+        fetch(url)
+            .then(res => res.json())
+            .then(data => {
+                setInfo(data)
+            })
+    }, [])
     return (
         <div>
             my toy
             <div className="overflow-x-auto w-full mb-20 mt-20">
                 <table className="table w-full">
                     {/* head */}
-                    <thead>
+                    <thead className='mx-0'>
                         <tr>
                             <th>
                                 <label>
@@ -25,52 +36,11 @@ const MyToy = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {/* row 1 */}
-                        <tr>
-                            <th>
-                                <label>
-                                    <input type="checkbox" className="checkbox" />
-                                </label>
-                            </th>
-                            <td>
-                                <div className="flex items-center space-x-3">
-                                    <div className="avatar">
-                                        <div className="mask mask-squircle w-12 h-12">
-                                          <img src="s" alt="s" />
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div className="font-bold">
-                                            <p>
-                                            {user ? user.displayName : 'name'}
-                                            </p>
-                                            <p className='font-extralight'>
-                                                user email
-                                            </p>
-                                            </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                Zemlak, Daniel and Leannon
-                            </td>
-                            <td>Humanoid robot Toy</td>
-                            <td>
-
-                                <div>
-
-                                    <span>price : 54545$ </span> <br />
-                                    <span>Quantity : 20 </span> <br />
-                                    <span>ratings : 5 </span>
-                                </div>
-                            </td>
-                            <th>
-                                <div>
-                                    <button className='hover:bg-fuchsia-200 rounded-md px-5'>edit</button>
-                                </div>
-
-                            </th>
-                        </tr>
+                        {
+                            info.map(i => <MyToytable
+                            info={info} key={i._id}
+                            ></MyToytable>)
+                        }
                     </tbody>
                 </table>
             </div>

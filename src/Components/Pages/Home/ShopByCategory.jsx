@@ -38,8 +38,7 @@ const ShopByCategory = () => {
                     {
                         categoryName.map(n => <Tab key={n._id}>
                            <button className='hover:bg-fuchsia-200'>
-                           {n.
-                                sub_category}
+                           {n.sub_category}
                            </button>
                         </Tab>)
                     }
