@@ -15,23 +15,28 @@ const Home = () => {
             <section>
                 <HeaderBanner></HeaderBanner>
             </section>
+
             <section>
                 <Gallary></Gallary>
             </section>
+
             <section className='mb-48 mt-48 '>
                 <ShopByCategory
                     setSubcategoryData={setSubcategoryData}
                 ></ShopByCategory>
-
                 {
                     subcatagoryData && <ShopByCategoryDetails
                         subcatagoryData={subcatagoryData}
                     ></ShopByCategoryDetails>
                 }
             </section>
+
+
             <section className='mb-20 mt-24'>
                 <OurStore></OurStore>
             </section>
+
+
 
             <section className='mb-20 mt-24 '>
                 <Feedback></Feedback>

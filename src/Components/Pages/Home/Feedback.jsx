@@ -10,7 +10,6 @@ const Feedback = () => {
                  from-emerald-200
                   to-fuchsia-300 
                    hover:shadow-teal-300
-                   
                    mb-10'>
                     <div
                         className="block 
@@ -112,7 +111,6 @@ const Feedback = () => {
                 {/*  */}
                 <div className='
             shadow-lg 
-
 
                hover:bg-gradient-to-tr from-emerald-200 to-fuchsia-300          hover:shadow-teal-300'>
                     <div

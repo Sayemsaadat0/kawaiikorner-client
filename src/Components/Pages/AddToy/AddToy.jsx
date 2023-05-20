@@ -17,14 +17,14 @@ const AddToy = () => {
         const Available_Quantity = form.Available_Quantity.value;
         const details = form.details.value;
         const formData = {
-            toyName:toyName,
-            Picture:Picture,
-            Seller_Name:Seller_Name,
-            Seller_email:Seller_email,
-            sub_category:sub_category,
-            price:price,
-            Available_Quantity:Available_Quantity,
-            details:details
+            toyName: toyName,
+            Picture: Picture,
+            Seller_Name: Seller_Name,
+            Seller_email: Seller_email,
+            sub_category: sub_category,
+            price: price,
+            Available_Quantity: Available_Quantity,
+            details: details
         }
         console.log(formData);
         fetch('http://localhost:5000/addtoy', {
@@ -38,8 +38,8 @@ const AddToy = () => {
             .then(data => {
                 if (data.acknowledged) {
                     Swal.fire(
-                       'your toy successfullly addeded'
-                      )
+                        'your toy successfullly addeded'
+                    )
                     console.log(data)
                 }
             })
@@ -107,7 +107,6 @@ const AddToy = () => {
                         name='price'
                         placeholder="price"
                         className="input input-bordered w-full" />
-
                     <label
                         className="label">
                         <span className="label-text">Available Quantity </span>
@@ -115,7 +114,6 @@ const AddToy = () => {
                     <input
                         type="text"
                         name='Available_Quantity' placeholder="Available Quantity " className="input input-bordered w-full" />
-
                     <label
                         className="label">
                         <span className="label-text">Details</span>
@@ -125,9 +123,7 @@ const AddToy = () => {
                         name='details'
                         placeholder="details"
                         className="input input-bordered w-full" />
-
                 </div>
-
                 <div className='flex justify-center'>
                     <button type='submit' className='btn btn-success w-[50%] mt-5'>Submit</button>
                 </div>

@@ -6,16 +6,16 @@ import React from 'react';
 const AllToyTable = ({ allToy, hadnleDelete }) => {
     const { 
         Available_Quantity, 
-        Picture, Seller_Name, 
-        Seller_email, details, 
+        Picture, 
+        Seller_Name, 
+        Seller_email, 
+        details, 
         price, 
         sub_category, 
-        toyName,
-         _id } = allToy[0]
+        toyName, _id } = allToy[0]
 
  
     // console.log(allToy)
-
 
     return (
         <div className='w-full'>

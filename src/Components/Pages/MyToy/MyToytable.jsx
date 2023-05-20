@@ -38,9 +38,7 @@ const MyToytable = ({info}) => {
                             </td>
                             <td>{sub_category}</td>
                             <td>
-
                                 <div>
-
                                     <span>price : {price} </span> <br />
                                     <span>Quantity : {Available_Quantity} </span> <br />
                                     <span>ratings : 5 </span>

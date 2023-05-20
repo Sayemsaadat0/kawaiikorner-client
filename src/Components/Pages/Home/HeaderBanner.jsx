@@ -9,8 +9,6 @@ const HeaderBanner = () => {
                 className=''
                 src="https://i.ibb.co/4K7r657/Untitled-design-prev-ui.png" alt="" />
             <div>
-
-
                 <div className='flex justify-center flex-col items-center h-full  text-center'>
                     <h2
                         className=' md:text-5xl w-[80%] font-bold'

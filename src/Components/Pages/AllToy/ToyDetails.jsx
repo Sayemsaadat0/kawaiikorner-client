@@ -8,7 +8,7 @@ const ToyDetails = () => {
         flex-col 
         justify-center 
         items-center'>
-          <h2 className='text-white text-3xl font-bold underline'>  toy details</h2>
+          <h2 className='text-white text-3xl font-bold underline'> Toy details</h2>
             <div className="card
              card-compact
               w-[60%] mt-10
@@ -27,7 +27,7 @@ const ToyDetails = () => {
                     <h2 className="card-title ">toy er name</h2>
                     <p>If a dog chews shoes whose shoes does he choose?</p>
                     <p>If a dog chews shoes whose shoes does he choose?</p>
-                    <p>If a dog chews shoes whose shoes does he choose?If a dog chews shoes whose shoes does he choose?If a dog chews shoes whose shoes does he choose?</p>
+                    <p></p>
 
                 </div>
             </div>

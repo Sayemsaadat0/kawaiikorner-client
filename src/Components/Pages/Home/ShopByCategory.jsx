@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-const ShopByCategory = ({setSubcategoryData}) => {
+const ShopByCategory = ({ setSubcategoryData }) => {
     const [categoryName, setCategoryName] = useState([])
 
     useEffect(() => {
@@ -18,28 +18,11 @@ const ShopByCategory = ({setSubcategoryData}) => {
             <h2 className='text-center text-3xl font-bold mb-20'>shop by category</h2>
             <Tabs classname=''>
                 <TabList className='md:flex justify-center gap-10 text-2xl bg-gradient-to-tr from-cyan-100 to-fuchsia-100 p-4'>
-                    {/* <Tab className='hover:bg-fuchsia-200'>
-                        <button>
-                            Transforming Robots
-                        </button>
-                    </Tab>
-
-                    <Tab className='hover:bg-fuchsia-200'>
-                        <button>
-                            Robotic Astronauts
-                        </button>
-                    </Tab>
-
-                    <Tab className='hover:bg-fuchsia-200'>
-                        <button>
-                            Robo Pets
-                        </button>
-                    </Tab> */}
                     {
                         categoryName.map(n => <Tab key={n._id}>
-                           <button onClick={()=>setSubcategoryData(n)} className='hover:bg-fuchsia-200'>
-                           {n.subcatname}
-                           </button>
+                            <button onClick={() => setSubcategoryData(n)} className='hover:bg-fuchsia-200'>
+                                {n.subcatname}
+                            </button>
                         </Tab>)
                     }
                 </TabList>
@@ -56,14 +39,10 @@ const ShopByCategory = ({setSubcategoryData}) => {
                                     <h2 className="card-title">title!</h2>
                                     <p>price : </p>
                                     <p>ratings : </p>
-
-
-                                    <button className="btn flex items-center gap-2 
-                                        ">
-
+                                 
+                                    <button
+                                     className="btn flex items-center gap-2 ">
                                         View Details
-
-
                                     </button>
                                 </div>
                             </div>
@@ -77,14 +56,9 @@ const ShopByCategory = ({setSubcategoryData}) => {
                                     <p>price : </p>
                                     <p>ratings : </p>
 
-                                    <button className="btn flex items-center gap-2 
-                                        ">
-
+                                    <button className="btn flex items-center gap-2 ">
                                         View Details
-
-
                                     </button>
-
                                 </div>
                             </div>
                         </div>
@@ -105,12 +79,9 @@ const ShopByCategory = ({setSubcategoryData}) => {
                                         <p>ratings : </p>
 
 
-                                        <button className="btn flex items-center gap-2 
-                                        ">
-
+                                        <button
+                                         className="btn flex items-center gap-2  ">
                                             View Details
-
-
                                         </button>
                                     </div>
                                 </div>
@@ -124,12 +95,10 @@ const ShopByCategory = ({setSubcategoryData}) => {
                                         <p>price : </p>
                                         <p>ratings : </p>
 
-                                        <button className="btn flex items-center gap-2 
-                                        ">
+                                        <button 
+                                        className="btn flex items-center gap-2  ">
                                             View Details
-
-
-                                        </button>
+                                            </button>
 
                                     </div>
                                 </div>
@@ -152,13 +121,8 @@ const ShopByCategory = ({setSubcategoryData}) => {
                                         <h2 className="card-title">title!</h2>
                                         <p>price : </p>
                                         <p>ratings : </p>
-
-
-                                        <button className="btn flex items-center gap-2 
-                                        ">
+                                        <button className="btn flex items-center gap-2 ">
                                             View Details
-
-
                                         </button>
                                     </div>
                                 </div>
@@ -173,10 +137,7 @@ const ShopByCategory = ({setSubcategoryData}) => {
                                         <p>ratings : </p>
 
                                         <button className="btn flex items-center gap-2">
-
                                             View Details
-
-
                                         </button>
 
                                     </div>
