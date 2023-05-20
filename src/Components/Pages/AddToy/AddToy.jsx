@@ -16,7 +16,7 @@ const AddToy = () => {
         const price = form.price.value;
         const Available_Quantity = form.Available_Quantity.value;
         const details = form.details.value;
-        const data = {
+        const formData = {
             toyName:toyName,
             Picture:Picture,
             Seller_Name:Seller_Name,
@@ -26,18 +26,20 @@ const AddToy = () => {
             Available_Quantity:Available_Quantity,
             details:details
         }
-        console.log(data);
+        console.log(formData);
         fetch('http://localhost:5000/addtoy', {
             method: "POST",
             headers: {
                 "content-type": "application/json"
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify(formData)
         })
             .then(res => res.json())
             .then(data => {
                 if (data.acknowledged) {
-                    alert('Toy added successfully')
+                    Swal.fire(
+                       'your toy successfullly addeded'
+                      )
                     console.log(data)
                 }
             })

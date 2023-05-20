@@ -16,11 +16,11 @@ const Register = () => {
         const name = form.name.value
         const password = form.password.value
         const photo = form.photo.value
-        console.log(email, name, password, photo)
+   
         createUser(email, password)
             .then(result => {
                 const createduser = result.user
-                console.log(createduser)
+             
                 form.reset()
             })
             .catch(error => {

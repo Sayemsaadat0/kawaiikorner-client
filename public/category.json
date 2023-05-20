@@ -1,11 +1,56 @@
 [
-    {
-        "name":"caategory one"
-    },
-    {
-        "name":"caategory two"
-    },
-    {
-        "name":"caategory three"
-    }
+  {
+    "name": "RoboWarrior Thundercracker",
+    "seller_name": "Ellen Hubbard",
+    "sub_category": "Transforming Robots",
+    "price": 3018,
+    "picture": "http://placehold.it/32x32",
+    "quantity": 27,
+    "description": "lorem10"
+  },
+ {
+    "name": "TurboBot Ironhide",
+    "seller_name": "Matilda Barton",
+    "sub_category": "Transforming Robots",
+    "price": 1674,
+    "picture": "http://placehold.it/32x32",
+    "quantity": 21,
+    "description": "lorem10"
+  },
+  {
+    "name": "AstroCrew Explorer",
+    "seller_name": "Hurley Estes",
+    "sub_category": "Robotic Astronauts",
+    "price": 1780,
+    "picture": "http://placehold.it/32x32",
+    "quantity": 25,
+    "description": "lorem10"
+  },
+  {
+    "name": "AstroMech Orbiter",
+    "seller_name": "Mattie Reilly",
+    "sub_category": "Robotic Astronauts",
+    "price": 2469,
+    "picture": "http://placehold.it/32x32",
+    "quantity": 25,
+    "description": "lorem10"
+  },
+  {
+    "name": "BoltBot",
+    "seller_name": "Lula Gillespie",
+    "sub_category": "Robo Pets",
+    "price": 1753,
+    "picture": "http://placehold.it/32x32",
+    "quantity": 29,
+    "description": "lorem10"
+  },
+  {
+    "name": "GizmoPet",
+    "seller_name": "Aileen Leblanc",
+    "sub_category": "Robo Pets",
+    "price": 1105,
+    "picture": "http://placehold.it/32x32",
+    "quantity": 37,
+    "description": "lorem10"
+  }
 ]
