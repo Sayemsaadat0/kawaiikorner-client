@@ -29,6 +29,24 @@ const AddToy = () => {
             },
             body: JSON.stringify(data)
         })
+
+
+
+
+        fetch('http://localhost:7979/bookings',{
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body : JSON.stringify(booking)
+        })
+        .then(res => res.json())
+        .then(data => {
+           if(data.insertedId){
+            alert('marahaba')
+           }
+        })
+
         Swal.fire(
             'Good job!',
             'You clicked the button!',
@@ -77,7 +95,7 @@ const AddToy = () => {
                         type="email"
                         name='Seller_email'
                        defaultValue={user? user.email : 'your email '}
-                        className="input input-bordered w-full" />
+                        className="input input-bordered w-full" disabled/>
 
                     <label
                         className="label">

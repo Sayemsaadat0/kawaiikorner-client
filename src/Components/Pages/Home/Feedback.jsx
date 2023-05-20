@@ -5,7 +5,8 @@ const Feedback = () => {
         <div>
             <h3 className='text-center text-3xl font-bold'>our clients tal</h3>
             <div className='md:grid grid-cols-2 p-10 gap-5'>
-                <div className='shadow-lg             hover:bg-gradient-to-tr
+                <div className='shadow-lg             
+                hover:bg-gradient-to-tr
                  from-emerald-200
                   to-fuchsia-300 
                    hover:shadow-teal-300
