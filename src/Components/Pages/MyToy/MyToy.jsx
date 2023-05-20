@@ -21,7 +21,7 @@ const MyToy = () => {
             <div className="overflow-x-auto w-full mb-20 mt-20">
                 <table className="table w-full">
                     {/* head */}
-                    <thead className='mx-0'>
+                  {/*   <thead className='mx-0'>
                         <tr>
                             <th>
                                 <label>
@@ -34,7 +34,7 @@ const MyToy = () => {
                             <th>Price & Quantity</th>
                             <th></th>
                         </tr>
-                    </thead>
+                    </thead> */}
                     <tbody>
                         {
                             info.map(i => <MyToytable

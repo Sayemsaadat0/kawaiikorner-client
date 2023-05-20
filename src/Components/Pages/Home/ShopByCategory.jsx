@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-const ShopByCategory = () => {
+const ShopByCategory = ({setSubcategoryData}) => {
     const [categoryName, setCategoryName] = useState([])
 
     useEffect(() => {
-        fetch('category.json')
+        fetch('http://localhost:5000/subToy')
             .then(res => res.json())
             .then(data => {
                 setCategoryName(data)
@@ -37,8 +37,8 @@ const ShopByCategory = () => {
                     </Tab> */}
                     {
                         categoryName.map(n => <Tab key={n._id}>
-                           <button className='hover:bg-fuchsia-200'>
-                           {n.sub_category}
+                           <button onClick={()=>setSubcategoryData(n)} className='hover:bg-fuchsia-200'>
+                           {n.subcatname}
                            </button>
                         </Tab>)
                     }
@@ -51,7 +51,7 @@ const ShopByCategory = () => {
                             hover:bg-gradient-to-tr
                             from-emerald-200
                              to-fuchsia-300 ">
-                                <figure><img src="https://i.ibb.co/LZfT7sF/7-prev-ui.png" alt="Shoes" /></figure>
+                                <figure><img src="https://i.ibb.co/VCGMyWn/17-prev-ui.png" alt="Shoes" /></figure>
                                 <div className="card-body">
                                     <h2 className="card-title">title!</h2>
                                     <p>price : </p>
@@ -71,7 +71,7 @@ const ShopByCategory = () => {
                             <div className="card card-compact w-96 bg-base-100 shadow-xl mt-10
                             
                             hover:bg-gradient-to-tr from-emerald-200 to-fuchsia-300 ">
-                                <figure><img src="https://i.ibb.co/LZfT7sF/7-prev-ui.png" alt="Shoes" /></figure>
+                                <figure><img src="https://i.ibb.co/9rpqhpL/18-prev-ui.png" alt="Shoes" /></figure>
                                 <div className="card-body">
                                     <h2 className="card-title">title!</h2>
                                     <p>price : </p>
@@ -98,7 +98,7 @@ const ShopByCategory = () => {
                             hover:bg-gradient-to-tr
                             from-emerald-200
                              to-fuchsia-300 ">
-                                    <figure><img src="https://i.ibb.co/LZfT7sF/7-prev-ui.png" alt="Shoes" /></figure>
+                                    <figure><img src="https://i.ibb.co/njM7zs4/9-prev-ui.png" alt="Shoes" /></figure>
                                     <div className="card-body">
                                         <h2 className="card-title">title!</h2>
                                         <p>price : </p>
