@@ -41,7 +41,7 @@ const UpdateToy = () => {
             .then(data => {
                 if (data.acknowledged) {
                     Swal.fire(
-                        'your toy successfullly addeded'
+                        'Updated successfully'
                     )
                     form.reset()
                     navigate('/mytoy')

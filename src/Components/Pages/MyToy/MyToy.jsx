@@ -17,8 +17,9 @@ const MyToy = () => {
     }, []);
 
     const handleDelete=(id)=>{
-        const url=``
-        fetch(`url`,{
+        console.log('clicked')
+        const url=`http://localhost:5000/addtoy?${id}`
+        fetch(url,{
             method:"DELETE"
         })
         .then(res=>res.json())
