@@ -31,7 +31,7 @@ const UpdateToy = () => {
         }
         console.log(formData);
         fetch('https://kawaiikorner-server.vercel.app/addtoy', {
-            method: "PATCH",
+            method: "post",
             headers: {
                 "content-type": "application/json"
             },
