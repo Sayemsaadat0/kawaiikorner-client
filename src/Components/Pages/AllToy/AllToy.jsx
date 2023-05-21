@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const AllToy = () => {
     const [searchResults, setSearchResults] = useState([]);
     const [allToy, setAlltoy] = useState([])
-    const url = 'http://localhost:5000/addtoy'
+    const url = 'https://kawaiikorner-server.vercel.app/addtoy'
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -16,7 +16,7 @@ const AllToy = () => {
     /*  const hadnleDelete = id => {
          const proceed = confirm('are you sure you want to delete?')
          if (proceed) {
-             fetch(`http://localhost:5000/addtoy/${id}`)
+             fetch(`https://kawaiikorner-server.vercel.app/addtoy/${id}`)
                  .then(res => res.json())
                  .then(data => {
                      // console.log(data)
@@ -34,14 +34,14 @@ const AllToy = () => {
         event.preventDefault();
         const form = event.target;
         const toyName = form.search.value;
-        const url = `http://localhost:5000/search?toyName=${toyName}`;
+        const url = `https://kawaiikorner-server.vercel.app/search?toyName=${toyName}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setSearchResults(data))
     }
 
     /*  const hadnleUpdate = id =>{
-         fetch(`http://localhost:5000/addtoy/${id}`,{
+         fetch(`https://kawaiikorner-server.vercel.app/addtoy/${id}`,{
              method: 'PATCH',
              headers : {
                  'content-type' : 'application/json'

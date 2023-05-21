@@ -8,7 +8,7 @@ const ShopByCategoryDetails = ({ subcatagoryData }) => {
     const { subcatname } = subcatagoryData
     console.log(subcatname);
     useEffect(() => {
-        fetch(`http://localhost:5000/category?sub_category=${subcatname}`)
+        fetch(`https://kawaiikorner-server.vercel.app/category?sub_category=${subcatname}`)
             .then(res => res.json())
             .then(data => {
                 // console.log(data);

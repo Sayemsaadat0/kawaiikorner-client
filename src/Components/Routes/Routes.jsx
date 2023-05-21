@@ -60,12 +60,12 @@ const router = createBrowserRouter([
             {
                 path: '/toy/:id',
                 element: <PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/toyData/${params.id}`)
+                loader: ({ params }) => fetch(`https://kawaiikorner-server.vercel.app/toyData/${params.id}`)
             },
             {
                 path: '/updateToy/:id',
                 element: <PrivateRoute><UpdateToy></UpdateToy></PrivateRoute>,
-                loader:({params})=>fetch(`http://localhost:5000/updateToy/${params.id}`)
+                loader:({params})=>fetch(`https://kawaiikorner-server.vercel.app/updateToy/${params.id}`)
             },
         ]
     },
