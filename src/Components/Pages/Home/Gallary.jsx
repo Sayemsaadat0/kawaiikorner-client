@@ -5,7 +5,7 @@ import 'aos/dist/aos.css';
 const Gallary = () => {
     const [picture, setPicture] = useState([])
     useEffect(() => {
-        fetch('/public/Gallary.json')
+        fetch('https://kawaiikorner-server.vercel.app/gallary')
             .then(res => res.json())
             .then(data => setPicture(data))
     }, [])
