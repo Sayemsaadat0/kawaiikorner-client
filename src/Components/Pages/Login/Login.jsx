@@ -58,18 +58,16 @@ const Login = () => {
 
     return (
         <div>
-            <div className=" bg-white flex  justify-center py-12 sm:px-6 lg:px-8">
+            <div className=" bg-gradient-to-tr from-emerald-100 to-fuchsia-300  flex  justify-center py-12 sm:px-6  lg:px-8 mb-10 mt-10">
 
-                <div className=''>
-                    <img className='w-[75%] ' src="https://img.freepik.com/free-vector/login-concept-illustration_114360-748.jpg?w=740&t=st=1683012496~exp=1683013096~hmac=9dafba375df117dbac0badca9e0ba3fbac3541481bffc7a9386f33a46039a288" alt="" />
-                </div>
+              
                 <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
                     <div className="sm:mx-auto sm:w-full sm:max-w-md">
                         <h2 className="mt-6 text-center text-3xl font-semibold text-gray-900">
                             Sign in
                         </h2>
                     </div>
-                    <div className="bg-gradient-to-br flex flex-col py-10   shadow-lg sm:rounded-lg px-2
+                    <div className=" flex flex-col py-10   shadow-lg sm:rounded-lg px-2
                 hover:shadow-red-400 w-[75%] mx-auto 
                 ">
                         <form onSubmit={handleSignin} className="space-y-6 " action="#" method="POST">
@@ -97,11 +95,11 @@ const Login = () => {
                             <div>
                                 <button
                                     type="submit"
-                                    className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-red-500
+                                    className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-fuchsia-500
                             hover:bg-black">
                                     Sign in
                                 </button>
-                                <p className='mt-4'>not have an account ? <Link className='underline text-red-500' to='/register'>Register here</Link></p>
+                                <p className='mt-4'>not have an account ? <Link className='underline text-fuchsia-500' to='/register'>Register here</Link></p>
                                 <p className='text-red-500 font-semibold'>
                                     {error}
                                 </p>

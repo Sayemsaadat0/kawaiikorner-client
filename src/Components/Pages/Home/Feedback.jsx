@@ -8,7 +8,10 @@ const Feedback = () => {
     },[])
     return (
         <div>
-            <h3 className='text-center text-3xl font-bold'>our clients tal</h3>
+            <h3 className='text-center text-3xl text-fuchsia-600 font-bold w-[50%] mx-auto'>Praise Parade: Feedback and Testimonials from Satisfied Customers</h3>
+            <h3  className='w-[50%] mx-auto text-center mb-10'>
+            Discover the inspiring stories and positive experiences shared by our valued customers in their testimonials.
+            </h3>
             <div className='md:grid grid-cols-2 p-10 gap-5'>
                 <div
                 data-aos="zoom-in-right"

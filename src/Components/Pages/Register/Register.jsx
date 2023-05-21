@@ -30,10 +30,8 @@ const Register = () => {
 
     return (
         <div>
-            <div className=" bg-white md:flex  justify-center py-12 sm:px-6 lg:px-8">
-                <div>
-                    <img className='w-[75%]' src="https://img.freepik.com/free-vector/sign-concept-illustration_114360-125.jpg?w=740&t=st=1683012395~exp=1683012995~hmac=3185b5abb3a4ec2b9546bb01a2bcc0540447e41ba10a066854d8307e8901c0ae" alt="" />
-                </div>
+            <div className=" bg-gradient-to-tr from-emerald-100 to-fuchsia-300 mt-10 mb-10 md:flex  justify-center py-12 sm:px-6 lg:px-8">
+              
                 
                 <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
                 <div className="sm:mx-auto sm:w-full sm:max-w-md">
@@ -79,7 +77,7 @@ const Register = () => {
                                 <button
 
                                     type="submit"
-                                    className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-red-500
+                                    className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-fuchsia-500
                                     hover:bg-black">
                                     Register
                                 </button>

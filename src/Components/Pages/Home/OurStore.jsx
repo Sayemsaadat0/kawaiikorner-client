@@ -3,7 +3,10 @@ import React from 'react';
 const OurStore = () => {
     return (
         <div>
-           <h3 className='text-3xl font-bold mb-10 text-center '>have a tout in our store</h3> 
+           <h3 className='text-3xl text-fuchsia-500 font-bold mb-5 text-center '>have a tout in our store</h3> 
+           <p className='w-[50%] mx-auto text-center mb-10'>
+           Step into our shop and discover a world of uniqueness with exquisite handcrafted treasures and personalized service
+           </p>
             <div>
                 <div className="carousel w-full">
                     <div id="slide1" className="carousel-item relative w-full">
