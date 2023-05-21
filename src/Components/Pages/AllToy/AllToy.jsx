@@ -13,22 +13,7 @@ const AllToy = () => {
                 setAlltoy(data)
             })
     }, [])
-    /*  const hadnleDelete = id => {
-         const proceed = confirm('are you sure you want to delete?')
-         if (proceed) {
-             fetch(`https://kawaiikorner-server.vercel.app/addtoy/${id}`)
-                 .then(res => res.json())
-                 .then(data => {
-                     // console.log(data)
-                     if (data.deletedCount > 0) {
-                         alert('fuckoff')
-                         const remaiining = bookings.filter(b => b._id !== id)
-                         setBookings(remaiining)
-                     }
-                 })
- 
-         }
-     } */
+  
 
     const handleSearch = (event) => {
         event.preventDefault();
@@ -40,28 +25,7 @@ const AllToy = () => {
             .then(data => setSearchResults(data))
     }
 
-    /*  const hadnleUpdate = id =>{
-         fetch(`https://kawaiikorner-server.vercel.app/addtoy/${id}`,{
-             method: 'PATCH',
-             headers : {
-                 'content-type' : 'application/json'
-             },
-             body : JSON.stringify({status : 'confirm'})
- 
-         })
-         .then(res => res.json())
-         .then(data => {
-             console.log(data)
-             if (data.modifiedCount > 0){
-                 const remaining = allToy.filter(b => b._id !== id )
-                 const updated = allToy.find(b => b._id === id)
-                 updated.status = 'confirm'
-                 const newUpdated =  [updated, ...remaining];
- 
-                 setAlltoy(newUpdated)
-             }
-         })
-     } */
+   
     return (
         <div>
             <h2 className='text-center text-3xl font-bold underline
@@ -134,18 +98,3 @@ const AllToy = () => {
 export default AllToy;
 
 
-{/* head */ }
-{/*<thead className=''>
-                        <tr>
-                        <th className='mx-0'>
-                        <label>
-                                    
-                                </label>
-                            </th> 
-                            <th>Seller Name</th>
-                            <th>Toy Name</th>
-                            <th>sub-category</th>
-                            <th>Price & Quantity</th>
-                            <th></th>
-                        </tr>
-                    </thead> */}

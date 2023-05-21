@@ -3,7 +3,9 @@ import { useLoaderData } from 'react-router-dom';
 
 const ToyDetails = () => {
     const toyData=useLoaderData();
-    const {toyName,Picture,Seller_Name,sub_category,price}=toyData;
+    const {toyName,Picture,Seller_Name,sub_category,price,Available_Quantity,details}=toyData;
+    
+    
     return (
         <div className='h-screen 
         bg-gradient-to-tr from-emerald-200 to-fuchsia-400
@@ -19,18 +21,24 @@ const ToyDetails = () => {
               mb-20 
              shadow-xl 
              mx-auto
+             hover:bg-gradient-to-tr from-emerald-500 to-fuchsia-400
               hover:shadow-fuchsia-400
               hover:scale-110
               duration-700 
               ">
                 <img
-                    className='rounded-lg'
+                    className='w-[75%] mx-auto'
                     src={Picture} alt="s" />
                 <div className="card-body font-semibold ">
-                    <h2 className="card-title ">{toyName}</h2>
-                    <p>Seller Name: {Seller_Name}</p>
+                    <h2 className="card-title text-3xl text-fuchsia-600">{toyName}</h2>
+                  <div className=' text-xl'>
+                  <p>Seller Name: {Seller_Name}</p>
                     <p>Sub Category: {sub_category}</p>
+                    <p>Available_Quantity: {Available_Quantity}</p>
                     <p>Price:{price}</p>
+                    <p className='w-96 
+                '>Description: {details}</p>
+                  </div>
 
                 </div>
             </div>
