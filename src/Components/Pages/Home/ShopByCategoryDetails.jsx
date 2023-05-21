@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FaStar } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 
 const ShopByCategoryDetails = ({ subcatagoryData }) => {
@@ -36,10 +37,11 @@ const ShopByCategoryDetails = ({ subcatagoryData }) => {
                                     <FaStar></FaStar>
                                 </p>
 
-                                <button
+                                  <button
                                     className="btn flex items-center gap-2 ">
                                     View Details
-                                </button>
+                                 </button>
+                    
                             </div>
                         </div>
                     </div>

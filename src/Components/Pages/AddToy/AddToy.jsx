@@ -14,6 +14,7 @@ const AddToy = () => {
         const Seller_email = form.Seller_email.value;
         const sub_category = form.sub_category.value;
         const price = form.price.value;
+        const ratings = form.ratings.value;
         const Available_Quantity = form.Available_Quantity.value;
         const details = form.details.value;
         const formData = {
@@ -23,6 +24,7 @@ const AddToy = () => {
             Seller_email: Seller_email,
             sub_category: sub_category,
             price: price,
+            ratings: ratings,
             Available_Quantity: Available_Quantity,
             details: details
         }
@@ -58,7 +60,7 @@ const AddToy = () => {
                         type="text"
                         name='toyName'
                         placeholder="Toy name"
-                        className="input input-bordered w-full" />
+                        className="input input-bordered w-full" required/>
                     <label
                         className="label">
                         <span className="label-text">Picture</span>
@@ -67,7 +69,7 @@ const AddToy = () => {
                         type="text"
                         name='Picture'
                         placeholder="Picture"
-                        className="input input-bordered w-full" />
+                        className="input input-bordered w-full" required/>
 
                     <label
                         className="label">
@@ -77,7 +79,7 @@ const AddToy = () => {
                         type="text"
                         name='Seller_Name'
                         placeholder="Seller Name"
-                        className="input input-bordered w-full" />
+                        className="input input-bordered w-full" required/>
 
                     <label
                         className="label">
@@ -97,7 +99,7 @@ const AddToy = () => {
                         type="text"
                         name='sub_category'
                         placeholder="sub category"
-                        className="input input-bordered w-full" />
+                        className="input input-bordered w-full" required/>
 
                     <label
                         className="label">
@@ -108,6 +110,7 @@ const AddToy = () => {
                         name='price'
                         placeholder="price"
                         className="input input-bordered w-full" />
+                 
                     <label
                         className="label">
                         <span className="label-text">Available Quantity </span>
@@ -115,6 +118,16 @@ const AddToy = () => {
                     <input
                         type="text"
                         name='Available_Quantity' placeholder="Available Quantity " className="input input-bordered w-full" />
+                
+                    <label
+                        className="label">
+                        <span className="label-text">Ratings</span>
+                    </label>
+                    <input
+                        type="text"
+                        name='ratings' placeholder="Ratings" className="input input-bordered w-full" />
+                 
+                 
                     <label
                         className="label">
                         <span className="label-text">Details</span>
