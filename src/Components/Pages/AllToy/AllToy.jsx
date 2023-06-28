@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const AllToy = () => {
     const [searchResults, setSearchResults] = useState([]);
     const [allToy, setAlltoy] = useState([])
-    const url = 'https://kawaiikorner-server.vercel.app/addtoy'
+    const url = 'https://kawaiikorner-server-sayemsaadat0.vercel.app/addtoy'
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -19,7 +19,7 @@ const AllToy = () => {
         event.preventDefault();
         const form = event.target;
         const toyName = form.search.value;
-        const url = `https://kawaiikorner-server.vercel.app/search?toyName=${toyName}`;
+        const url = `https://kawaiikorner-server-sayemsaadat0.vercel.app/search?toyName=${toyName}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setSearchResults(data))

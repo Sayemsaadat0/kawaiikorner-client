@@ -30,7 +30,7 @@ const Feedback = () => {
                             <img className='
                             mt-5
                             mx-auto
-                            rounded-full h-16' src="https://i.ibb.co/XSvB0xB/1.png" alt="sm" />
+                            rounded-full h-16' src="https://i.ibb.co/D57Mtck/1.png" alt="sm" />
                         </div>
                         <div className="px-6 ">
                             <h5
@@ -58,14 +58,14 @@ const Feedback = () => {
                 data-aos="zoom-in-left"
                 className='shadow-lg 
                hover:bg-gradient-to-tr
-                from-emerald-200 to-fuchsia-300          hover:shadow-teal-300 mb-5'>
+                from-emerald-200 to-fuchsia-300   hover:shadow-teal-300 mb-5'>
                     <div
                         className="block rounded-lg  text-center ">
                         <div>
                             <img className='
                         mt-5
                             mx-auto
-                            rounded-full h-16' src="https://i.ibb.co/s6Bbn41/2.png" alt="sm" />
+                            rounded-full h-16' src="https://i.ibb.co/nwvN0QZ/2.png" alt="sm" />
                         </div>
                         <div className="px-6 ">
                             <h5
@@ -101,7 +101,7 @@ const Feedback = () => {
                             <img className='
                         mt-5
                             mx-auto
-                            rounded-full h-16' src="https://i.ibb.co/T2ZDj0c/3.png" alt="sm" />
+                            rounded-full h-16' src="https://i.ibb.co/xgFQr3R/3.png" alt="sm" />
                         </div>
                         <div className="px-6 ">
                             <h5
@@ -138,7 +138,7 @@ const Feedback = () => {
                             <img className='
                         mt-5
                             mx-auto
-                            rounded-full h-16' src="https://i.ibb.co/5cXbvxF/4.png" alt="sm" />
+                            rounded-full h-16' src="https://i.ibb.co/qWqBS0g/4.png" alt="sm" />
                         </div>
                         <div className="px-6 ">
                             <h5

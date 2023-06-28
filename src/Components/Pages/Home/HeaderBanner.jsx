@@ -4,10 +4,10 @@ import LazyLoad from 'react-lazy-load';
 
 const HeaderBanner = () => {
     return (
-        <div className='md:flex bg-fuchsia-200 h-[50%] md:mt-20 mb-20 py-10'>
+        <div className='md:flex bg-fuchsia-200    mb-20 py-10'>
             <img
-                className=''
-                src="https://i.ibb.co/4K7r657/Untitled-design-prev-ui.png" alt="" />
+                className='w-[60%]'
+                src="https://i.ibb.co/n6StGgy/lost-soul-unscreen.gif" alt="" />
             <div>
                 <div className='flex justify-center flex-col items-center h-full  text-center'>
                     <h2

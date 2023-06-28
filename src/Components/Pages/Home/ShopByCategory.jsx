@@ -9,7 +9,7 @@ const ShopByCategory = () => {
     const [categoryName, setCategoryName] = useState([])
 
     useEffect(() => {
-        fetch('https://kawaiikorner-server.vercel.app/subToy')
+        fetch('https://kawaiikorner-server-sayemsaadat0.vercel.app/subToy')
             .then(res => res.json())
             .then(data => {
                 setCategoryName(data)

@@ -30,7 +30,7 @@ const Navbar = () => {
                             <NavLink to='/blog'>Blog</NavLink>
                         </ul>
                     </div>
-                    <img className='w-36 rounded-md' src="https://i.ibb.co/M86pxhv/ss.png" alt="" />
+                    <img className='w-36 rounded-md' src="https://i.ibb.co/vLpGK7c/image.png" alt="" />
                 </div>
                 <div className="navbar-center hidden lg:flex ">
                     <ul className="menu menu-horizontal px-1 gap-4">

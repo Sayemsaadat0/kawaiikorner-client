@@ -9,7 +9,7 @@ const ShopByCategoryDetails = ({ subcatagoryData }) => {
     const { subcatname } = subcatagoryData
     // console.log(subcatname);
     useEffect(() => {
-        fetch(`https://kawaiikorner-server.vercel.app/category?sub_category=${subcatname}`)
+        fetch(`https://kawaiikorner-server-sayemsaadat0.vercel.app/category?sub_category=${subcatname}`)
             .then(res => res.json())
             .then(data => {
                 // console.log(data);
@@ -20,12 +20,12 @@ const ShopByCategoryDetails = ({ subcatagoryData }) => {
         <div className='mx-auto md:flex justify-around mt-10'>
             {
                 subCategoryDetails.map(category => <div key={category?._id}>
-                    <div className='md:flex justify-evenly gap-10'>
-                        <div className="card card-compact w-96 bg-base-100 shadow-xl 
+                    <div className='md:flex justify-evenly '>
+                        <div className="card card-compact w-full bg-base-100 shadow-xl 
                                 hover:bg-gradient-to-tr
                                 from-emerald-200
                                  to-fuchsia-300 ">
-                            <figure><img src={category.picture} alt="Shoes" /></figure>
+                            <figure><img  src={category.picture} alt="Shoes" /></figure>
                             <div className="card-body">
                                 <h2 className="card-title">{category?.name}</h2>
                                 <p>price :{category.price} </p>

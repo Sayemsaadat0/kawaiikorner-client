@@ -29,7 +29,7 @@ const AddToy = () => {
             details: details
         }
         console.log(formData);
-        fetch('https://kawaiikorner-server.vercel.app/addtoy', {
+        fetch('https://kawaiikorner-server-sayemsaadat0.vercel.app/addtoy', {
             method: "POST",
             headers: {
                 "content-type": "application/json"

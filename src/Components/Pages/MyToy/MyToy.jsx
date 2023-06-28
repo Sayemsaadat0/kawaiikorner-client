@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const MyToy = () => {
     const { user, } = useContext(AuthContext)
     const [info, setInfo] = useState([])
-    const url = `https://kawaiikorner-server.vercel.app/addtoy?email=${user?.email}`
+    const url = `https://kawaiikorner-server-sayemsaadat0.vercel.app/addtoy?email=${user?.email}`
 
     useEffect(() => {
         fetch(url)
@@ -18,7 +18,7 @@ const MyToy = () => {
 
     const handleDelete=(id)=>{
         console.log('clicked')
-        const url=`https://kawaiikorner-server.vercel.app/addtoy?${id}`
+        const url=`https://kawaiikorner-server-sayemsaadat0.vercel.app/addtoy?${id}`
         fetch(url,{
             method:"DELETE"
         })
